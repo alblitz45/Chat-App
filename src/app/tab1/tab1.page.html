@@ -10,7 +10,7 @@
         <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Chat App</ion-title>
+    <ion-title>WhatsApp 2</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -28,23 +28,31 @@
 
 <ion-menu side="end" menuId="first" contentId="main-content">
   <ion-header>
-    <!-- <ion-toolbar color="primary"> -->
-      <!-- <ion-title>Opciones</ion-title> -->
       <ion-buttons slot="right">
         <ion-button (click)="cerrarMenu()">
           <ion-icon slot="icon-only" name="close"></ion-icon>
         </ion-button>
       </ion-buttons>
-    <!-- </ion-toolbar> -->
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item button (click)="doSomething()">Nuevo grupo</ion-item>
-      <ion-item button (click)="doSomething()">Nueva difusión</ion-item>
-      <ion-item button (click)="doSomething()">Dispositivos vinculados</ion-item>
-      <ion-item button (click)="doSomething()">Mensajes destacados</ion-item>
-      <ion-item button (click)="doSomething()">Marcar todos como leidos</ion-item>
-      <ion-item button (click)="abrirAjustes()">Ajustes</ion-item>
+      <ion-item button (click)="doSomething()">
+        <ion-icon slot="start" name="add-circle"></ion-icon>
+        Nuevo grupo
+      </ion-item>
+      <ion-item button (click)="doSomething()">
+        <ion-icon slot="start" name="star"></ion-icon>
+        Mensajes destacados
+      </ion-item>
+      <ion-item button (click)="doSomething()">
+        <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+        Marcar todos como leídos
+      </ion-item>
+      <ion-item button (click)="abrirAjustes()">
+        <ion-icon slot="start" name="settings"></ion-icon>
+        Ajustes
+      </ion-item>
     </ion-list>
+    
   </ion-content>
 </ion-menu>
