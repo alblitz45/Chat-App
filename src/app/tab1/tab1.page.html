@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button (click)="abrirMenu()"> 
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Chat App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content" [fullscreen]="true">
+  <ion-list>
+    <app-item-chat
+      *ngFor="let chat of chats"
+      [username]="chat.username"
+      [message]="chat.message"
+      [date]="chat.date"
+      [avatarUrl]="chat.avatarUrl"
+    ></app-item-chat>
+  </ion-list>
+</ion-content>
+
+<ion-menu side="end" menuId="first" contentId="main-content">
+  <ion-header>
+    <!-- <ion-toolbar color="primary"> -->
+      <!-- <ion-title>Opciones</ion-title> -->
+      <ion-buttons slot="right">
+        <ion-button (click)="cerrarMenu()">
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <!-- </ion-toolbar> -->
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button (click)="doSomething()">Nuevo grupo</ion-item>
+      <ion-item button (click)="doSomething()">Nueva difusión</ion-item>
+      <ion-item button (click)="doSomething()">Dispositivos vinculados</ion-item>
+      <ion-item button (click)="doSomething()">Mensajes destacados</ion-item>
+      <ion-item button (click)="doSomething()">Marcar todos como leidos</ion-item>
+      <ion-item button (click)="abrirAjustes()">Ajustes</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

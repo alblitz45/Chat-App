@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <!-- <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button> -->
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Estados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Mi estado</h2>
+        <p>Hace 10 minutos</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-list-header>Recientes</ion-list-header>
+
+    <ion-item *ngFor="let estado of estados">
+      <ion-avatar slot="start">
+        <img [src]="estado.avatarUrl" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ estado.username }}</h2>
+        <p>{{ estado.time }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

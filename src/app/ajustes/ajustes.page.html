@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajustes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button (click)="configurarPerfil()">
+      <ion-icon slot="start" name="person-circle"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="notifications-outline"></ion-icon>
+      <ion-label>Notificaciones</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="shield-checkmark-outline"></ion-icon>
+      <ion-label>Privacidad</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="chatbubbles-outline"></ion-icon>
+      <ion-label>Chats</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="cloud-upload-outline"></ion-icon>
+      <ion-label>Almacenamiento</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <!-- <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button> -->
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Llamadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let llamada of llamadas">
+      <ion-avatar slot="start">
+        <img [src]="llamada.avatarUrl" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ llamada.username }}</h2>
+        <p>{{ llamada.time }}</p>
+      </ion-label>
+      <ion-icon slot="end" [name]="llamada.icon"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
